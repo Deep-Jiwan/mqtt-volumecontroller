@@ -14,9 +14,11 @@ Mermaid diagram (rendered on platforms that support Mermaid):
 
 ```mermaid
 graph LR
-  ESP32[ESP32 Sensor Board]\n  Broker[MQTT Broker (e.g. Mosquitto)]\n  Client[Windows Client (pycaw)]
-  ESP32 -->|publish\nesp32/volume, esp32/mute| Broker
-  Client -->|subscribe\nesp32/volume, esp32/mute| Broker
+  ESP32["ESP32 Sensor Board"]
+  Broker["MQTT Broker (e.g. Mosquitto)"]
+  Client["Windows Client (pycaw)"]
+  ESP32 -->|publish: esp32/volume, esp32/mute| Broker
+  Client -->|subscribe: esp32/volume, esp32/mute| Broker
 ```
 
 ASCII alternative:
